@@ -7,14 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "push": "drizzle-kit push:pg",
-    "pull": "drizzle-kit introspect:pg ",
+    "push": "drizzle-kit push",
+    "pull": "drizzle-kit introspect",
     "generate": "drizzle-kit generate",
     "drop": "drizzle-kit drop",
-    "check": "drizzle-kit check:pg",
-    "up": "drizzle-kit up:pg"
+    "check": "drizzle-kit check",
+    "up": "drizzle-kit up"
   },
   "dependencies": {
+    "@electric-sql/pglite": "^0.3.3",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.42.0",
     "next": "15.3.1",
@@ -28,7 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "drizzle-kit": "^0.31.0",
+    "drizzle-kit": "^0.31.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "tailwindcss": "^4",
