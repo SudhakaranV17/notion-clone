@@ -45,7 +45,7 @@ const LoginPage = () => {
       form?.reset();
       setSubmitError(response?.error?.message);
     } else {
-      router.replace("/");
+      router.replace("/dashboard");
     }
   };
   return (
@@ -105,7 +105,7 @@ const LoginPage = () => {
           {isLoading ? <Loader /> : "Login"}
         </Button>
         <p className="text-foreground/60 text-sm">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link href={"/signup"} className="text-primary">
             Sign up
           </Link>

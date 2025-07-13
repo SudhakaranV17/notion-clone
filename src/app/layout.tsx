@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/lib/providers/next-themes";
 import { DM_Sans } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import AppStateProvider from "@/lib/providers/state-provider";
 
 const inter = DM_Sans({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={twMerge(`bg-background antialiased`, inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
+          <AppStateProvider>{children}</AppStateProvider>
         </ThemeProvider>
       </body>
     </html>
